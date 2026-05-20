@@ -5,7 +5,7 @@ set -euo pipefail
 # Downloads a public, no-secrets release manifest + tarball, backs up the
 # current app, syncs code, runs smoke checks, and reloads the kiosk browser.
 
-MANIFEST_URL="${DOCBOX_UPDATE_MANIFEST_URL:-${1:-https://raw.githubusercontent.com/graimek311y/docbox-releases/main/stable/manifest.json}}"
+MANIFEST_URL="${DOCBOX_UPDATE_MANIFEST_URL:-${1:-https://graimek311y.github.io/docbox-releases/stable/manifest.json}}"
 WORKDIR="${WORKDIR:-/home/doogle/tvmed}"
 BACKUP_ROOT="${BACKUP_ROOT:-$WORKDIR/backups}"
 STAMP="$(date +%Y%m%d-%H%M%S)"
