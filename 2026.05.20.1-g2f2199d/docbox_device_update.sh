@@ -113,6 +113,10 @@ python3 - <<'PY'
 from pathlib import Path
 html = Path('web/device-kiosk.html').read_text()
 js = Path('web/device-kiosk.js').read_text()
+version = Path('web/docbox-version.json')
+assert version.exists(), 'release version file missing'
+assert 'id="versionBadge"' in html, 'Docbox version badge missing'
+assert 'docbox-version.json' in js, 'kiosk does not load Docbox version file'
 assert 'docbox.tv Device Kiosk' in html, 'kiosk HTML marker missing'
 assert 'id="headerConfirmEnd"' in html, 'header End Call button missing'
 assert 'id="end"' not in html, 'body End Call button still present in HTML'
