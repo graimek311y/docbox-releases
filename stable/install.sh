@@ -4,7 +4,7 @@ curl -fsSL https://graimek311y.github.io/docbox-releases/stable/docbox_device_up
 if [[ -s /tmp/docbox_device_update.sh ]]; then
   bash /tmp/docbox_device_update.sh https://graimek311y.github.io/docbox-releases/stable/manifest.json
 else
-  curl -fsSL https://graimek311y.github.io/docbox-releases/stable/docbox-update-2026.05.21.1-g1d188df.tgz -o /tmp/docbox-update.tgz
+  curl -fsSL https://graimek311y.github.io/docbox-releases/stable/docbox-update-2026.05.24.1-gdce414e.tgz -o /tmp/docbox-update.tgz
   echo 'Installer helper missing; use scripts/docbox_device_update.sh from an already-installed Docbox app.' >&2
   exit 1
 fi
